@@ -1,0 +1,171 @@
+/* ============================================================
+   Shared site styles
+   Reset, design tokens, header/nav, and footer used by every
+   page. Case-study visual styles (hero, photo blocks, task
+   layout, etc.) are scoped to that page's own stylesheet in
+   /assets/css/<project>.css and are NOT duplicated here.
+   ============================================================ */
+
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+
+  --bg: #F3F4EF;
+  --surface: #EAE8E0;
+  --text: #201F1B;
+  --muted: #6B6F64;
+  --accent: #3E5C57;
+  --accent-soft: #cdd8d3;
+  --line: #D7D5CB;
+
+  --serif: "Spectral", "Iowan Old Style", "Palatino Linotype", serif;
+  --sans: "Karla", -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-padding-top: calc(88px + env(safe-area-inset-top, 0px));
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- Header ---------- */
+
+header.site {
+  position: sticky;
+  top: 0;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+/* Home page nav */
+nav.site-nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav.site-nav a {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  padding-bottom: 2px;
+}
+
+nav.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+nav.site-nav a:hover::after { width: 100%; }
+
+/* Case-study "back to home" link, top-right of header */
+.back-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.back-link:hover { color: var(--text); }
+.back-link svg { display: block; }
+
+/* ---------- Footer ---------- */
+
+footer.site {
+  padding: 32px 32px calc(32px + env(safe-area-inset-bottom, 0px));
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+footer.site a { text-decoration: none; color: var(--muted); border-bottom: 1px solid transparent; }
+footer.site a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.footer-links { display: flex; gap: 20px; }
+
+/* Bottom-of-page "back to all work" nav, used on every case study */
+.case-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.case-nav a {
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+.case-nav a:hover { color: var(--accent); }
+
+@media (max-width: 640px) {
+  .header-inner { padding: 16px 20px; }
+  .wrap { padding: 0 20px; }
+  footer.site { padding: 28px 20px; flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

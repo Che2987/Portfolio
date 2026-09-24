@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>PG Shop | Chethna Ajith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/pgshop.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="wordmark" href="../index.html">Chethna Ajith</a>
+    <a class="back-link" href="../index.html#work">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 4L4 12M4 12H10M4 12V6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      All work
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="case-hero">
+      <p class="case-eyebrow">Case study: individual capstone thesis, run as a live project with P&amp;G India</p>
+      <h1>PG Shop</h1>
+      <p class="dek">Redesigning P&amp;G India's direct-to-consumer e&#8209;commerce platform across 14 brands</p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <p class="label">Timeline</p>
+          <p class="value">November 2021–April 2022<br>Scoped as 3 months, extended to 6</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Program</p>
+          <p class="value">Product Design Capstone<br>ISDI, with Parsons School of Design</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Mentor</p>
+          <p class="value">Somdutt Sarkar<br>P&amp;G India's Design Leader</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">My role</p>
+          <p class="value">Sole designer<br>Research, IA, UX/UI, design system, prototype</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Tools</p>
+          <p class="value">Figma, Miro, Adobe CC<br>Microsoft Teams</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Outcome</p>
+          <p class="value">Delivered a full UX/UI proposal and working prototype to P&amp;G India and ISDI</p>
+        </div>
+      </div>
+
+      <div class="case-photo photo-filled"><img src="../assets/images/pgshop/img-8ed84992fb.png" alt="Device mockup montage of PG Shop 4.0 across mobile screens"></div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">The Challenge</h2>
+      <p>PG Shop (PGShop.in) is P&amp;G India's direct-to-consumer e-commerce platform, covering 14 brands including Gillette, Olay, Oral-B, Tide, Ariel, and Pantene. It launched in 2019 as P&amp;G's test of direct e-commerce in India. This project became its fourth version.</p>
+      <p>The brief was to propose a UX/UI-led redesign that moved four business metrics defined together with P&amp;G India: PGShop UX, average session duration, cart percentage, and conversion rate.</p>
+      <p>A heuristic evaluation of the existing site, paired with competitive benchmarking against Amazon, Booking.com, Lush, Cartier, and ITC Store, surfaced a consistent pattern. The platform buried purchase-relevant information under promotional density, gave almost no way to compare or trust individual products, and did nothing to carry P&amp;G's own brand equity into the actual shopping experience.</p>
+      <p class="muted">That last point mattered specifically because of P&amp;G Shiksha, P&amp;G's CSR program since 2005, which has built or supported 2,100+ schools and reached 1.7 million children, 50,000 of them moved to online education during the pandemic, funded in part by every PG Shop purchase. The existing site treated this as a banner, not a moment in the purchase itself.</p>
+      <div class="photo-block small">
+        <div class="case-photo small photo-filled"><img src="../assets/images/pgshop/img-b22ef75379.png" alt="Homepage annotated with red/green markers showing decision friction"></div>
+        <p class="photo-caption">Illustrative examples of decision-friction in the previous experience</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Solution Preview</h2>
+      <p>What shipped was a full information-architecture rebuild around all 14 brands, with two new flows added on top of the existing structure: a personalized gift-box builder called Custom Bundles, and a P&amp;G Shiksha flow that turns the CSR program into part of checkout instead of a banner beside it.</p>
+      <p>The homepage, product pages, and checkout were redesigned around the same underlying gap: users trusted the P&amp;G name but had no reliable way to compare products or feel guided toward a decision. Three connected Figma prototypes carried the work through, ending not at a plain order receipt but at a Shiksha confirmation moment built as a small interaction rather than a static screen.</p>
+      <div class="photo-block small">
+        <div class="case-photo small photo-filled tint-yellow"><img src="../assets/images/pgshop/img-fee211e9dd.png" alt="Homepage, product page, and category listing screens from PG Shop 4.0"></div>
+        <p class="photo-caption">Homepage, product page, and category listing screens from the redesigned experience</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Key Features</h2>
+
+      <div class="task">
+        <p class="task-label"><span>Feature</span>Homepage &amp; Discovery</p>
+
+        <div class="task-part">
+          <p class="subhead">Problem</p>
+          <p>The existing homepage led with a shipping policy and customer-care number before anything a user actually needed, forced heavy scrolling to reach the end of the page, and gave no visible difference between active and inactive icon states.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>I moved non-essential information out of the primary view, added scroll-position awareness through a visible scrollbar, and gave users a way to find their delivery location early, surfaced right on entry rather than buried at checkout.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>I chose a chevron-based carousel over a flat grid for the category row because it kept users aware there were more options without needing to scroll. It came directly out of watching users miss content below the fold in interviews.</p>
+        </div>
+
+        <div class="photo-block small">
+        <div class="case-photo small photo-filled tint-yellow"><img src="../assets/images/pgshop/img-7ae71dc681.png" alt="Homepage as the user scrolls"></div>
+        <p class="photo-caption">Homepage as the user scrolls</p>
+      </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Feature</span>Product Pages &amp; Comparison</p>
+
+        <div class="task-part">
+          <p class="subhead">Problem</p>
+          <p>Users couldn't tell how many other people had rated a product, bestseller tags only appeared on some brand pages rather than consistently, and there was no way to preview product details without reading the full description.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>I extended bestseller and offer tags across every brand page rather than a subset, added a 360&deg; image system to the product view, and introduced a "read more" pattern to shorten dense product-detail text on first load.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>I gave delivery-date estimates their own visible line at the product-page level, not just at checkout, because interview users specifically stalled out not knowing whether a product would arrive in time. That's a Conversion-tagged fix, not a cosmetic one.</p>
+        </div>
+
+        <div class="photo-block small">
+        <div class="case-photo small photo-filled tint-yellow"><img src="../assets/images/pgshop/img-15f980dc23.png" alt="Product discovery listing on the left, followed by the product details page scrolled to reviews/feedback and the delivery-check screen"></div>
+        <p class="photo-caption">Product discovery on the left; on the right, the product details page scrolled down to reviews and feedback, and the delivery-check screen</p>
+      </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Feature</span>Checkout, Cart &amp; Payment</p>
+
+        <div class="task-part">
+          <p class="subhead">Problem</p>
+          <p>Coupon eligibility was invisible until a user tried and failed to apply a code, and free-sample eligibility only became visible deep in the checkout flow.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>I surfaced available and applicable coupons as their own screen before the payment step, and moved free-sample visibility earlier into the cart itself so users could see what they'd unlock before committing.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>This wasn't riding on one complaint. It showed up twice, from two different research passes: a checkout journey-mapping session captured a user not knowing which codes were still active, and the same gap surfaced independently in the 30 open points logged after Discovery, where a separate note read that the site should remind users of applicable coupons at the payment stage. Two separate methods landing on the same problem is what made it worth building.</p>
+        </div>
+
+        <div class="photo-block small">
+        <div class="case-photo small photo-filled tint-yellow"><img src="../assets/images/pgshop/img-77c382fe79.png" alt="Cart with Apply Coupon link in Bill Details, next to the standalone Apply Coupon screen"></div>
+        <p class="photo-caption">The cart, with Apply Coupon surfaced in Bill Details, next to the standalone Apply Coupon screen listing available codes</p>
+      </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Feature</span>Sign In / Sign Up &amp; Account</p>
+
+        <div class="task-part">
+          <p class="subhead">Problem</p>
+          <p>Logging in redirected users straight to account settings, a page most people had no reason to visit right after signing in.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>I redirected post-login users to the homepage instead. Account settings is somewhere you go on purpose, not somewhere you land by default.</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Feature</span>P&amp;G Shiksha &mdash; turning CSR into a product moment</p>
+
+        <div class="task-part">
+          <p class="subhead">Problem</p>
+          <p>P&amp;G Shiksha existed on the site as a static banner. It didn't connect to the act of purchasing at all, despite being directly funded by purchases.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>I redesigned the post-purchase confirmation screen to route through a P&amp;G Shiksha moment: a progress-tracker-style visual, styled after how Google Pay shows scratch-card rewards, that resolves into "You just helped Kusum go to School!" with a link to read more about the program.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>I made this a drag-and-drop confirmation interaction rather than a passive banner, so the contribution felt like something the user did, not something that happened near them. Gamifying CSR can tip into feeling exploitative fast, so I kept the interaction simple and factual, real numbers, real program, instead of adding points, streaks, or a leaderboard. Those would have turned "here's what your purchase did" into a growth-hack loop.</p>
+        </div>
+
+        <div class="photo-block small">
+        <div class="case-photo small photo-filled tint-yellow"><img src="../assets/images/pgshop/img-eff30590ca.png" alt="The Shiksha drag-and-drop confirmation resolving into You just helped Kusum go to School"></div>
+        <p class="photo-caption">The Shiksha drag-and-drop confirmation, resolving into "You just helped Kusum go to School!"</p>
+      </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Extended exploration</span>Custom Bundles &amp; Gifting</p>
+
+        <div class="task-part">
+          <p>It started as a moonshot exercise in the Discovery phase, think big first, check feasibility after, not meant to ship as-is. The idea: since PG Shop carries 14 brands, let a customer assemble a personalized gift box across all of them, choosing products, a box size, an illustrated sleeve design with attribution to the artist who created each pattern, and their own printed message.</p>
+          <p>Where it landed by the end of the thesis is more complete than a typical moonshot sketch. I carried it through to a genuine information-architecture entry, a full three-step prototype (Choose Products &rarr; Design Box &rarr; Review &amp; Pay), and a physical packaging system: three box sizes, small for 1&ndash;3 products, medium for 3&ndash;5, large for 5&ndash;7, sized and tested against products actually sold on PG Shop, built as rollover hinged-lid boxes with matching gift cards and packing material, and physically mocked up in cardboard to check they held together.</p>
+          <p>I kept pushing on this one because it works on three levels at once. For P&amp;G, it's a new revenue lever inside a platform that was otherwise purely transactional, since gifting and personalization both carry a willingness to pay that a standard restock purchase doesn't. For emerging illustrators, the sleeve-design system is a real commercial platform: a student designer's pattern goes on an actual product with their name attributed to it, not just into a portfolio. And for the person buying it, it turns a P&amp;G purchase into the joy of putting together a gift, rather than restocking detergent.</p>
+        </div>
+
+        <div class="photo-block small">
+        <div class="case-photo small photo-filled tint-yellow"><img src="../assets/images/pgshop/img-ba0160613e.png" alt="Custom Bundles design step screens next to the physical box mockup"></div>
+        <p class="photo-caption">Two screens from the Design Box step, next to the physical mockup I built to test the packaging</p>
+      </div>
+      </div>
+
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Research</h2>
+
+      <div class="stat-strip">
+        <div class="stat"><span class="num">3</span><span class="lbl">personas built from real demographic detail</span></div>
+        <div class="stat"><span class="num">9</span><span class="lbl">users interviewed, three per persona</span></div>
+        <div class="stat"><span class="num">19</span><span class="lbl">recurring themes from affinity mapping</span></div>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">Personas</p>
+        <p>I built three personas from real demographic and behavioural detail, each with its own comfort/convenience/price weighting.</p>
+        <div class="persona-grid">
+          <div class="persona-card">
+            <p class="persona-name">Amy</p>
+            <p class="persona-meta">Gen Z, 21 &middot; Mumbai &middot; university student &middot; &#8377;5,000&ndash;&#8377;10,000/mo</p>
+            <p class="persona-note">Forgets to reorder, runs out of products before realising, low attention span.</p>
+          </div>
+          <div class="persona-card">
+            <p class="persona-name">Jake</p>
+            <p class="persona-meta">Millennial, 29 &middot; Bangalore &middot; tech executive &middot; &#8377;10,000&ndash;&#8377;15,000/mo</p>
+            <p class="persona-note">Shops online specifically to avoid the hassle of physical stores; doesn't mind paying extra for convenience.</p>
+          </div>
+          <div class="persona-card">
+            <p class="persona-name">Gina</p>
+            <p class="persona-meta">Gen X, 51 &middot; Chennai &middot; government employee, mother of two &middot; &#8377;15,000&ndash;&#8377;25,000/mo</p>
+            <p class="persona-note">Prefers to touch and feel products in-store, difficult to shift her brand loyalty.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">Interviews</p>
+        <p>I interviewed nine users, three per persona, to learn what site content actually stuck with them, what they felt was important, and what they wanted changed.</p>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">Journey Mapping</p>
+        <p>I mapped each persona's journey through four stages, Discovery, Browsing &amp; Product Evaluation, Checkout, and Payment, logging actions, needs, touchpoints, and emotional state at each one, then pulled design opportunities from wherever that emotional state dropped.</p>
+        <p>One example: Jake's journey through Discovery captured him Googling "oral b electric toothbrush" on his sister's recommendation, landing on a Google Shopping listing instead of PG Shop directly. That produced two opportunities that had nothing to do with the interface itself: improving Google SEO so PG Shop shows up as the first listing, and getting products to appear in Google's shopping carousel at all. A different example, from Checkout: a user who couldn't tell which coupon codes were still active produced the note that a coupon codes page could be a good addition, small, specific, and traceable to one session.</p>
+      </div>
+
+      <div class="photo-block small">
+        <div class="case-photo small photo-filled fit-contain"><img src="../assets/images/pgshop/img-994d2d5868.png" alt="Journey mapping board showing Gen Z persona actions, needs, and pain points"></div>
+        <p class="photo-caption">Personas and journey mapping helped surface where users hesitated, sought reassurance, or deferred decisions during discovery.</p>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">Affinity Mapping</p>
+        <p>Synthesising all nine interviews produced 19 recurring clusters: Trust/Quality, Time, Offers/Incentives, Reviews, Similar Products, Suggestions, Advt Redirects, Reminders, Accountability, Patience, Frequency of Use, Familiarity, Interesting Apps, Ease/Convenience, Recollection, Explore, Loyalty, Variety, Comparing Products.</p>
+        <p>The pattern across all 19 was the same one the heuristic evaluation had already surfaced from a different angle: users trusted the P&amp;G name, but had no reliable way to differentiate between similar products or feel guided through a decision. Brand trust wasn't translating into decision confidence.</p>
+      </div>
+
+      <div class="photo-block small">
+        <div class="case-photo small photo-filled"><img src="../assets/images/pgshop/img-e2da845588.png" alt="Affinity mapping sticky notes clustered by theme, tagged with persona names"></div>
+        <p class="photo-caption">19 clusters emerged from affinity mapping, centered on trust, comparison, and risk.<br>These insights were synthesised into decisions that shaped the design strategy.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">System Mapping</h2>
+
+      <div class="subsection">
+        <p class="subsection-title">Information Architecture</p>
+        <p>I rebuilt the IA around all 14 PG Shop brands, adding two paths that hadn't existed before, a dedicated Custom Bundles flow and a P&amp;G Shiksha flow, sitting alongside the existing Search, Cart, Category View, and Account structures. Custom Bundles got its own sub-tree: What is Custom Bundles &rarr; Step 1 (Choose Products) &rarr; Step 2 (Design Box) &rarr; Checkout/Cart.</p>
+      </div>
+
+      <div class="photo-block small">
+        <div class="case-photo small photo-filled"><img src="../assets/images/pgshop/img-e2650dda2c.png" alt="Partial view of the PG Shop information architecture"></div>
+        <p class="photo-caption">A partial view of the IA, covering Search, Cart, Custom Bundles, Category View, and the Hamburger menu</p>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">User Flows</p>
+        <p>Two core flows anchored the redesign, based on how users actually arrive.</p>
+        <p><strong>Organic search:</strong> Homepage &rarr; Brand Page &rarr; Product Page (reads reviews, adds to cart) &rarr; Cart (applies coupon, sees free-sample threshold) &rarr; Sign up &rarr; Payment &rarr; P&amp;G Shiksha confirmation.</p>
+        <p><strong>Arriving via a product ad in another app:</strong> Product Page &rarr; Cart &rarr; guest checkout (skips sign-up) &rarr; Payment &rarr; P&amp;G Shiksha confirmation.</p>
+        <p>Both paths deliberately end at the same place, a P&amp;G Shiksha moment, rather than a plain order receipt.</p>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">Visual System</p>
+        <p>The design system was built on atomic design principles, with light and dark component states, a typographic scale set in Inter, and defined grids for iPhone, iPad, and desktop, built to hold up across screen sizes, not designed mobile-first and stretched to fit.</p>
+        <p>Low-fidelity wireframes mapped the shell and IA first. High-fidelity wireframes and the component system followed once those structural decisions were settled.</p>
+      </div>
+
+      <div class="photo-block small">
+        <div class="case-photo small photo-filled"><img src="../assets/images/pgshop/img-fe340fbe32.png" alt="Button and chip component sets across light and dark states"></div>
+        <p class="photo-caption">Button and chip components across light and dark states</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Prototyping</h2>
+      <p>I built three connected prototype flows in Figma.</p>
+
+      <div class="subsection">
+        <p class="subsection-title">Buying Journey</p>
+        <p>The full organic-search path: landing on the homepage, browsing to a brand, selecting a product, choosing between one- and two-column grid views, reading reviews, going through cart, coupon application, guest-or-signup choice, address entry, UPI payment, and arriving at the Shiksha confirmation.</p>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">Custom Bundles Journey</p>
+        <p>The three-step personalised-box flow described above, from product selection through 360&deg; box preview to review and payment.</p>
+      </div>
+
+      <div class="subsection">
+        <p class="subsection-title">P&amp;G Shiksha Journey</p>
+        <p>The drag-and-drop confirmation interaction connecting a completed purchase to its CSR contribution.</p>
+      </div>
+
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Testing &amp; Limitations</h2>
+      <p>This prototype did not go through user testing before the thesis closed. The thesis's own next-steps section lists testing the existing prototype as unfinished work.</p>
+      <p>The research itself also used convenience sampling, nine interviews across three personas, which was what a solo six-month thesis with no research budget could realistically get. A bigger sample, and specifically one that included users who'd bounced off the site without buying anything, would have made the findings stronger. I didn't have access to that group, so the insights here come from the users I could actually recruit.</p>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Reflection &amp; Next Steps</h2>
+      <p>The thesis identified five next steps: exploring more micro-interactions, detailing out the remaining screens for full site coverage, expanding the design system further, testing the existing prototype, and sending the Custom Bundles design brief onward as a formal proposal.</p>
+      <div class="impact-block">
+        <p>Looking back, the strongest part of this project wasn't any single screen. It was treating a 14-brand catalog as a systems problem instead of a page-by-page redesign. The IA, the two user flows, and the Custom Bundles exploration all came out of the same instinct: figure out the underlying structure of the business first, then design toward that.</p>
+      </div>
+      <p class="close-quote">The trade-off is that a system this ambitious, built solo in six months, still has real gaps, the untested prototype and the small interview sample being the two&nbsp;biggest.</p>
+    </section>
+
+    <nav class="case-nav">
+      <a href="../index.html#work">&larr; All work</a>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="site">
+  <span>Chethna Ajith</span>
+  <div class="footer-links">
+    <a href="mailto:chethnaajith@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/chethna-sreenivasan-76b16098/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>

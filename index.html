@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Chethna Ajith, Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* ============================================================
+     Home page-specific styles (hero, featured work, about).
+     Shared reset/tokens/header/footer live in assets/css/style.css.
+     ============================================================ */
+
+  .nav-toggle {
+    display: none;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    padding: 96px 0 72px;
+  }
+
+  .hero .eyebrow {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 60px);
+    line-height: 1.08;
+    margin: 0 0 22px;
+    max-width: 14ch;
+  }
+
+  .hero p.opener {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 46ch;
+    margin: 0;
+  }
+
+  /* ---------- Work list ---------- */
+
+  section.work {
+    padding: 20px 0 88px;
+  }
+
+  .section-label {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 6px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 24px;
+  }
+
+  .project-feature {
+    margin-bottom: 80px;
+    display: block;
+    cursor: default;
+  }
+
+  .project-feature:first-of-type { margin-top: 40px; }
+
+  .project-photo {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--line),
+      var(--line) 10px,
+      var(--bg) 10px,
+      var(--bg) 20px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .project-card {
+    position: relative;
+    z-index: 2;
+    max-width: 380px;
+    background: var(--card-bg);
+    color: var(--card-fg);
+    padding: 40px 36px;
+    margin-top: -72px;
+    margin-left: 48px;
+  }
+
+  .device-mockup-scene {
+    width: 100%;
+    height: 100%;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .browser-frame {
+    width: 78%;
+    background: #fff;
+    box-shadow: 0 24px 48px -12px rgba(20, 20, 15, 0.28);
+  }
+
+  .browser-frame .browser-chrome {
+    height: 22px;
+    background: #EDEDE8;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #E0E0D8;
+  }
+
+  .browser-frame .browser-chrome .bar {
+    width: 46%;
+    height: 8px;
+    background: #D8D8D0;
+  }
+
+  .browser-frame img {
+    display: block;
+    width: 100%;
+  }
+
+  .phone-frame {
+    position: absolute;
+    right: 7%;
+    bottom: -6%;
+    width: 21%;
+    background: #171815;
+    border-radius: 18px;
+    padding: 8px 8px;
+    box-shadow: 0 20px 40px -8px rgba(20, 20, 15, 0.38);
+  }
+
+  .phone-frame img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .pg-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .pg-phone-back {
+    left: 6%;
+    top: 8%;
+    bottom: auto;
+    width: 29%;
+    transform: rotate(-7deg);
+    z-index: 1;
+  }
+
+  .pg-phone-front {
+    right: 9%;
+    bottom: -7%;
+    width: 35%;
+    z-index: 2;
+    box-shadow: 0 28px 56px -14px rgba(20, 20, 15, 0.42);
+  }
+
+  @media (max-width: 640px) {
+    .pg-phone-back { left: 3%; top: 4%; width: 33%; }
+    .pg-phone-front { right: 4%; bottom: -5%; width: 40%; }
+  }
+
+  .ns-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .browser-card {
+    background: #fff;
+    box-shadow: 0 24px 48px -12px rgba(20, 20, 15, 0.28);
+  }
+
+  .browser-card .browser-chrome {
+    height: 20px;
+    background: #EDEDE8;
+    display: flex;
+    align-items: center;
+    padding: 0 9px;
+    border-bottom: 1px solid #E0E0D8;
+  }
+
+  .browser-card .browser-chrome .bar {
+    width: 46%;
+    height: 7px;
+    background: #D8D8D0;
+  }
+
+  .browser-card img {
+    display: block;
+    width: 100%;
+  }
+
+  .ns-main {
+    position: absolute;
+    left: 6%;
+    top: 9%;
+    width: 62%;
+  }
+
+  .ns-detail {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    width: 40%;
+    z-index: 2;
+    box-shadow: 0 28px 56px -14px rgba(20, 20, 15, 0.4);
+  }
+
+  @media (max-width: 640px) {
+    .ns-main { left: 4%; top: 6%; width: 78%; }
+    .ns-detail { right: 3%; bottom: 4%; width: 46%; }
+  }
+
+  @media (max-width: 640px) {
+    .phone-frame { right: 5%; bottom: -4%; width: 26%; }
+  }
+  .project-card.marriott { --card-bg: #FF9662; --card-fg: #201F1B; }
+  .project-card.deloitte { --card-bg: #86BC25; --card-fg: #23261F; }
+  .project-card.pg { --card-bg: #003DA5; --card-fg: #F3F4EF; }
+
+  .project-feature:nth-of-type(even) .project-card {
+    margin-left: auto;
+    margin-right: 48px;
+  }
+
+  .project-card .project-meta {
+    font-size: 14px;
+    color: color-mix(in srgb, var(--card-fg) 85%, transparent);
+    margin: 0 0 16px;
+  }
+
+  .project-card .project-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--card-fg);
+    margin: 0 0 2px;
+  }
+
+  .project-card h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 27px);
+    line-height: 1.3;
+    margin: 0 0 28px;
+  }
+
+  .project-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--card-fg);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--card-fg) 45%, transparent);
+    padding-bottom: 2px;
+  }
+
+  .project-cta svg {
+    transition: transform 0.25s ease;
+  }
+
+  .project-feature:hover .project-cta svg {
+    transform: translate(3px, -3px);
+  }
+
+  /* ---------- About ---------- */
+
+  section.about {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+  }
+
+  .about-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 88px 32px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+  }
+
+  .about-photo {
+    width: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--line),
+      var(--line) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    padding: 12px;
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .about-text h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    margin: 0 0 20px;
+  }
+
+  .about-text p {
+    margin: 0 0 16px;
+    max-width: 56ch;
+    color: var(--text);
+  }
+
+  .about-text p.muted {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* ---------- Responsive ---------- */
+
+  @media (max-width: 640px) {
+    .hero { padding: 56px 0 48px; }
+    .hero h1 { max-width: 100%; }
+    .project-card {
+      margin-top: -40px;
+      margin-left: 20px;
+      margin-right: 20px;
+      max-width: calc(100% - 40px);
+      padding: 28px 24px;
+    }
+    .project-feature:nth-of-type(even) .project-card {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .about-inner {
+      grid-template-columns: 1fr;
+      padding: 56px 20px;
+    }
+    .about-photo { width: 140px; height: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="wordmark" href="#top">Chethna Ajith</a>
+    <nav class="site-nav">
+      <a href="#about">About Me</a>
+      <a id="resume-link" aria-label="Download resume, PDF" href="resume/chethna-ajith-resume.pdf" download="Chethna_Ajith_Resume.pdf">Resume</a>
+      <a href="#work">Work</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Product Designer, UX/UI</p>
+      <h1>Chethna Ajith</h1>
+      <p class="opener">Something could be better? That's where I come&nbsp;in.</p>
+    </section>
+
+    <section class="work" id="work">
+      <p class="section-label">Featured work</p>
+
+      <div class="project-feature">
+        <div class="project-photo">
+          <div class="device-mockup-scene">
+            <div class="browser-frame">
+              <div class="browser-chrome"><div class="bar"></div></div>
+              <img src="assets/images/landing/img-eb021f61a6.png" alt="M-Corp desktop booking review screen">
+            </div>
+            <div class="phone-frame">
+              <img src="assets/images/landing/img-4a2e48b76b.png" alt="M-Corp mobile guest selection screen showing per-room accessibility options">
+            </div>
+          </div>
+        </div>
+        <div class="project-card marriott">
+          <p class="project-name">M-Corp</p>
+          <p class="project-meta">Vacation ownership app, Fortune&nbsp;500 RFP</p>
+          <h2>How do you let someone use a benefit they already&nbsp;have?</h2>
+          <a class="project-cta" href="mcorp/index.html">
+            View case study
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-feature">
+        <div class="project-photo">
+          <div class="ns-scene">
+            <div class="browser-card ns-main">
+              <div class="browser-chrome"><div class="bar"></div></div>
+              <img src="assets/images/landing/img-27ba19aee4.jpg" alt="Ask Northstar AI-assist landing screen with a search prompt and targeted agent cards like Market Pulse, Financial Brief Analyzer, Pipeline Intelligence, and Opportunity Radar">
+            </div>
+            <div class="browser-card ns-detail">
+              <div class="browser-chrome"><div class="bar"></div></div>
+              <img src="assets/images/landing/img-65bed0555a.jpg" alt="Northstar MCP Control Tower list showing requesters, rate limits, and approval statuses like Active, Suspended, and Revoked">
+            </div>
+          </div>
+        </div>
+        <div class="project-card deloitte">
+          <p class="project-name">Northstar</p>
+          <p class="project-meta">Internal insights platform, Deloitte&nbsp;leadership</p>
+          <h2>How do you catch someone up before they walk into a client&nbsp;meeting?</h2>
+          <a class="project-cta" href="northstar/index.html">
+            View case study
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-feature">
+        <div class="project-photo">
+          <img src="assets/images/landing/img-66341ec091.jpg" alt="Collage of PG Shop mobile screens — Oral B product listing, product detail, brand page, coupon screen, and the Shiksha confirmation reading You just helped Kusum go to School — on a yellow background" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="project-card pg">
+          <p class="project-name">PG Shop</p>
+          <p class="project-meta">Redesigning P&amp;G India's e-commerce&nbsp;platform</p>
+          <h2>How do you turn trust into an actual&nbsp;decision?</h2>
+          <a class="project-cta" href="pgshop/index.html">
+            View case study
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-photo"><img src="assets/images/landing/img-cd5353c6cd.jpg" alt="Chethna Ajith smiling, wearing a black knit top over a white shirt with black boots, standing in front of a red backdrop"></div>
+      <div class="about-text">
+        <h3>A bit more about me</h3>
+        <p>Chethna is a Product Designer based in Bangalore, currently working within Deloitte's consulting practice.</p>
+        <p>Her work spans client and internal-tool projects, from a Fortune 500 booking app built for a competitive RFP to an internal insights platform used by Deloitte's own leadership team; usually the kind of work that involves picking up a problem mid-flight as much as starting it from scratch.</p>
+        <p>Outside of design, she picks up a new skill every few weeks, prefers the beach over the mountains, and spends the rest of her time reading, playing board games, or in the water.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <span>&copy; 2026 Chethna Ajith</span>
+  <div class="footer-links">
+    <a href="mailto:chethnaajith@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>

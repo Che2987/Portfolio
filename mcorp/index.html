@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>M-Corp | Chethna Ajith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/mcorp.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="wordmark" href="../index.html">Chethna Ajith</a>
+    <a class="back-link" href="../index.html#work">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 4L4 12M4 12H10M4 12V6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      All work
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="case-hero">
+      <p class="case-eyebrow">Case study: client work via Deloitte USI</p>
+      <h1>M-Corp</h1>
+      <p class="dek">Redesigning a vacation-ownership booking experience for a Fortune&nbsp;500 RFP</p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <p class="label">Timeline</p>
+          <p class="value">January–March 2023 · four sprints</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Employer</p>
+          <p class="value">Deloitte USI</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Team</p>
+          <p class="value">Design Lead, UX Designer (me), Visual Designer</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">My role</p>
+          <p class="value">UX Designer, desktop and mobile, every flow</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Tools</p>
+          <p class="value">Figma</p>
+        </div>
+        <div class="meta-item">
+          <p class="label">Outcome</p>
+          <p class="value">Runner-up. Contract went to another consultancy on budget</p>
+        </div>
+      </div>
+
+      <div class="device-mockup">
+        <div class="desktop-frame">
+          <div class="desktop-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="url">mcorp.app</span>
+          </div>
+          <img src="../assets/images/mcorp/img-6a42f0a8ac.png" alt="M-Corp authenticated landing page on desktop, showing the Find a Hotel search widget">
+        </div>
+        <div class="phone-frame">
+          <img src="../assets/images/mcorp/img-929ccf6fb0.png" alt="M-Corp authenticated landing page on mobile, showing the Find a Hotel search widget">
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Project Goal &amp; Scope</h2>
+      <p>M-Corp needed a member-facing app for existing owners to actually use the benefits they already held: searching for and booking stays with free nights and discounted-night entitlements, tracking upcoming and past trips, and managing their profile and membership details.</p>
+      <p>This wasn't a purchase or ownership-management experience. The scope was entirely about day-to-day use of benefits members already had, in an app comparable to what M-Corp's parent group's flagship loyalty app offers its own members. What made it different was the underlying benefit structure, a legally mandated cancellation window, and a parallel loyalty identity in the group's separate hotel program.</p>
+      <p class="muted">I took stories from the Design Lead, researched how competitors and adjacent products handled the same problems (Marriott Bonvoy, Airbnb, Hilton, Booking.com, and Agoda), and designed the desktop and mobile experience across every flow in the product.</p>
+    </section>
+
+    <section class="tasks">
+
+      <div class="task">
+        <p class="task-label"><span>Task 1</span>Access &amp; Onboarding</p>
+
+        <div class="task-part">
+          <p class="subhead">Problems</p>
+          <p>A new member's password had to satisfy three conditions at once: 8 characters, 1 letter, 1 number. That sat against a non-editable, pre-populated email pulled directly from their welcome link.</p>
+          <p>On sign-in, existing members could hit one of two distinct error states. An invalid email format was called out directly and specifically. Incorrect credentials returned one deliberately generic message.</p>
+          <p>From that state, a member had two separate ways forward: head into Forgot Password, or click "Need Help?" to reach support directly.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>For both the initial Set Password screen and the password-reset step inside Forgot Password, I surfaced all three password requirements together up front instead of revealing them one at a time after a failed attempt.</p>
+          <p>Keeping "Need Help?" visible alongside Forgot Password, instead of funneling every failed sign-in through one recovery flow, meant a member who couldn't complete that flow on their own still had a direct route to a person, not just a dead end.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>Two decisions did most of the work in this flow.</p>
+          <p>Showing all three password requirements together, before a member starts typing, was the first. The more common pattern validates field by field and only surfaces each rule after a failed attempt, which turns password creation into a guessing game. Putting the finish line in view from the start removes most of that friction in one move.</p>
+          <p>The second was giving the credentials-error state two distinct exits instead of one. Forgot Password handles the most common case, but not every member gets there easily on their own. Leaving "Need Help?" in place alongside it kept the recovery path itself accessible, not just present.</p>
+        </div>
+
+        <div class="task-photo-pair">
+          <img src="../assets/images/mcorp/img-c6ee790aae.png" alt="Sign-in screen showing the 'Incorrect credentials' error message, with Forgot Password link and Need Help support prompt both visible">
+          <img src="../assets/images/mcorp/img-3ed91bcf63.png" alt="Reset Password screen showing all three password requirements listed together: 8 or more characters, at least one letter, at least one number">
+        </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Task 2</span>Search &amp; Discovery</p>
+
+        <div class="task-part">
+          <p class="subhead">Problems</p>
+          <p>A standard hotel-search pattern (pick a destination, pick dates, see results) didn't hold up once membership type entered the picture. Different membership types had different eligibility for which resorts and destinations they could see and book, some with additional restrictions like a maximum night cap.</p>
+          <p>Every member also had a legally mandated rescission period restricting which dates they could actually book, plus a separate "Book Free Nights" flow for members with unused free-night allowances, which needed to hide the standard date and room fields entirely.</p>
+          <p>Search itself had to handle real-world messiness gracefully: a destination entered with no resort chosen, a resort with zero availability, a search returning nothing at all.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>I mapped every combination of membership type against every search state before touching layout: which destinations a member could see, which fields should disable or hide, which calendar dates should grey out.</p>
+          <p>Rather than build parallel search flows per membership type, I designed one adaptive search component that reads a member's status and adjusts itself: the "Book Free Nights" toggle simply doesn't render for members who don't qualify for it, the resort dropdown filters itself to eligible properties only, and the date picker greys out both the rescission window and anything past the booking-window limit.</p>
+          <p>The same logic carried through to results. Instead of dead ends, every empty state redirected the member somewhere useful, with copy like "There is no availability in [Destination] for your selected dates. Check out these other popular resorts," paired with an actual alternate list rather than a blank page.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>The easy version of this would have let a member search freely and then shown an error after the fact. I decided against that. Ineligible destinations and resorts are filtered out of the dropdowns before a member can select them, and restricted dates are greyed out rather than selectable-then-rejected. The system does the work of enforcing eligibility invisibly, instead of making a member feel like they made a mistake by choosing something they were never going to be able to book.</p>
+        </div>
+
+        <div class="task-photo-stack">
+          <img src="../assets/images/mcorp/img-b44bece70f.png" alt="Find a Hotel search widget with Book Free Nights disabled, showing the standard destination, resort, dates, and rooms &amp; guests fields">
+          <img src="../assets/images/mcorp/img-798dc2ea11.png" alt="Find a Hotel search widget with Book Free Nights toggled on and active, showing the destination and resort fields for booking with free nights">
+        </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Task 3</span>Booking</p>
+
+        <div class="task-part">
+          <p class="subhead">Problems</p>
+          <p>A single Booking Review page had to represent several different pricing realities depending on a member's specific benefits and eligibility at the time of booking: rack rate, discounted member nights, or free nights, each needing its own combination of struck-through pricing and remaining-balance messaging.</p>
+          <p>Layered on top of that, a member booking for a family or group could select multiple rooms across different room types, and each individual room needed its own guest count and, where relevant, its own accessibility configuration, with options like "Mobility accessible room with roll-in shower," "with tub," or "with roll-in jacuzzi."</p>
+          <p>Cancellations added their own complexity: refunding a trip meant returning nights to the correct balance, since different night-types were tracked as separate currencies rather than one shared total.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>Rather than build several separate booking-review layouts, I designed one Total Cost component that reads a member's specific booking context and renders the right combination of struck-through rack rate, discounted total, and remaining-nights messaging.</p>
+          <p>I designed and pushed for the per-room accessibility selection specifically, letting a member specify exact accessibility needs for each individual room rather than leaving one blanket note on the whole reservation.</p>
+          <p>For cancellations, I mapped out exactly which night-type gets refunded where, so the interface matched what was actually happening to a member's balance behind the scenes, tying into the real handoff with the parent group's reservation systems rather than just flipping a status flag on the front end.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>The accessibility feature was a deliberate call, not a nice-to-have. Without it, a family traveling with a child who needs a roll-in shower in one room, with no special requirements in another, would've had to call the resort directly to sort it out room by room.</p>
+          <p>Building that specificity into the booking flow itself meant the request was already on record before check-in. No follow-up call, no relying on a front-desk agent to relay it correctly. A small feature, but one that changes who the product actually works for.</p>
+        </div>
+
+        <div class="task-photo-combo row">
+          <img src="../assets/images/mcorp/img-8e87e88c6a.png" alt="Desktop Choose Guests screen showing per-room accessibility options (roll-in shower, tub, roll-in jacuzzi) alongside adult, children, and children's-age fields">
+          <img class="mobile-shot" src="../assets/images/mcorp/img-addbc91e88.png" alt="Mobile Choose Guests screen showing the same accessibility options alongside guest counts and price per night">
+        </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Task 4</span>Member Profile &amp; Trips</p>
+
+        <div class="task-part">
+          <p class="subhead">Problems</p>
+          <p>Profile edits came with a real risk that's easy to overlook: letting a member change their email or password without proper verification is a security hole, while making that verification too heavy turns a two-second edit into a chore.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>For email changes specifically, I built an inline verification step (a confirmation link sent to the new address) before the change actually takes effect, rather than saving immediately and hoping the member typed it correctly.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>Requiring verification before an email change takes effect, rather than after, added friction to a rarely used feature. In exchange, a mistyped or malicious change can't lock a member out of their own account.</p>
+        </div>
+
+        <div class="task-photo-pair three">
+          <img src="../assets/images/mcorp/img-0cda74cb65.png" alt="Change your Email form showing the old email, pre-filled and locked, next to an editable new email field">
+          <img src="../assets/images/mcorp/img-90000bdae3.png" alt="Change your Email form showing an inline 'Invalid email format' error on the new email field">
+          <img src="../assets/images/mcorp/img-1789fbdeeb.png" alt="Change your Email confirmation state, reading 'We have sent an email verification link... your email cannot be changed until it is verified,' with a Resend Verification Email button">
+        </div>
+      </div>
+
+      <div class="task">
+        <p class="task-label"><span>Task 5</span>System-Wide &amp; Supporting</p>
+
+        <div class="task-part">
+          <p class="subhead">Problems</p>
+          <p>The parts of a product that don't map to a single user flow (error states, loading states, membership info, automated emails) are exactly the parts most likely to feel bolted-on if every screen invents its own version.</p>
+          <p>My Membership was a specific case of this. Different membership types carried meaningfully different sets of information: some needed a full benefits breakdown including discount nights, free nights, and an anniversary date, while others needed a much smaller, simpler view entirely. Forcing every membership type into one identical template would have meant a lot of conditionally hidden fields for no real benefit to the member.</p>
+        </div>
+
+        <div class="task-part">
+          <p class="subhead">Approach</p>
+          <p>I designed one shared skeleton-loading pattern and one error-page template, reused everywhere in the app rather than reinvented per screen.</p>
+          <p>For automated communications, I built a single branded email shell (header, footer, image treatment) with a swappable body. A booking confirmation and an AI-generated content email came from completely different systems, but they needed to look like they came from the same product.</p>
+          <p>For My Membership, rather than cramming every membership type into one template, I split the page by what each type actually needed to see. Simpler membership types got their own lighter view, instead of a page full of fields that didn't apply to them.</p>
+          <p>The page also had to reconcile two identities at once: a member's M-Corp entitlements, and their standing in their parent group's separate hotel loyalty program, both visible on the same screen. Those two systems didn't update on the same schedule, so rather than presenting that loyalty status as live data, I added a plain disclaimer noting it refreshes weekly and pointed members to their loyalty account directly for anything more current.</p>
+        </div>
+
+        <div class="task-part decision">
+          <p class="subhead">Design decision</p>
+          <p>The email template work is worth calling out on its own. This was early 2023, and we were already designing the branded shell for AI-generated content emails, building the container before the content-generation system was fully in place. A good example of designing ahead of the immediate ask rather than only for the ticket in front of you.</p>
+        </div>
+
+        <div class="task-photo-combo">
+          <img src="../assets/images/mcorp/img-f1e4b4e85c.png" alt="Desktop My Membership screen for an active Regular Member, showing Membership Entitlements, Membership Timeline, and the parent group's loyalty program details">
+          <img class="mobile-shot" src="../assets/images/mcorp/img-2f37c17b96.png" alt="Mobile My Membership screen for a pending member, showing the loyalty status tooltip: 'The XXX level is refreshed on a weekly basis. Please refer to your XYZ Account for the most up to date Status level.'">
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Impact</h2>
+      <div class="impact-block">
+        <p>We were the runner-up. The contract went to another consultancy on budget. The client told us as much directly.</p>
+      </div>
+      <div class="task-photo-single">
+        <img src="../assets/images/mcorp/img-d02dd6bfd8.png" alt="Booking confirmation screen showing the confirmed reservation, resort details, check-in details, rooms selected, and total cost">
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">As We Conclude</h2>
+      <p class="close-quote">This project was as much about designing for constraint as it was about designing screens. Membership tiers, a legally mandated rescission window, and two loyalty identities running side by side meant almost nothing in this app could be a single, static flow. Everything had to adapt to who was actually using it. That systems thinking, more than any individual screen, is what I'd point to as the throughline of this work.</p>
+    </section>
+
+    <nav class="case-nav">
+      <a href="../index.html#work">← All work</a>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="site">
+  <span>Chethna Ajith</span>
+  <div class="footer-links">
+    <a href="mailto:chethnaajith@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/chethna-sreenivasan-76b16098/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
