@@ -6,24 +6,24 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* ================= CUBE DATA ================= */
 const C = {r:'var(--red)',b:'var(--blue)',y:'var(--yellow)',w:'var(--white)',o:'var(--orange)',g:'var(--green)',k:'var(--ink)'};
 const FRONT = [
-  ['P','r','y'],['O','w','r'],['R','y','r'],
-  ['T','b','w'],['F','r','w'],['O','y','b'],
-  ['L','w','b'],['I','b','y'],['O','r','w']];
+  ['P','r','w'],['O','r','w'],['R','r','w'],
+  ['T','r','w'],['F','r','w'],['O','r','w'],
+  ['L','r','w'],['I','r','w'],['O','r','w']];
 const TOP = [
-  ['C','w','r'],['H','b','w'],['E','y','k'],
-  ['T','r','y'],['H','w','b'],['N','r','w'],
-  ['A','y','r'],['✦','b','y'],['✦','w','k']];
+  ['C','b','w'],['H','b','w'],['E','b','w'],
+  ['T','b','w'],['H','b','w'],['N','b','w'],
+  ['A','b','w'],['✦','b','w'],['✦','b','w']];
 const RIGHT = [
-  ['U','y','b'],['X','r','w'],['✦','b','y'],
-  ['D','w','r'],['E','y','k'],['S','b','w'],
-  ['I','r','y'],['G','w','b'],['N','y','r']];
+  ['U','y','k'],['X','y','k'],['✦','y','k'],
+  ['D','y','k'],['E','y','k'],['S','y','k'],
+  ['I','y','k'],['G','y','k'],['N','y','k']];
 const stickerFor = (face,x,y,z) => ({
   front:  z ===  1 ? FRONT[(y+1)*3+(x+1)] : null,
   top:    y === -1 ? TOP[(z+1)*3+(x+1)]   : null,
   right:  x ===  1 ? RIGHT[(y+1)*3+(1-z)] : null,
   back:   z === -1 ? ['','o','k'] : null,
   left:   x === -1 ? ['','g','k'] : null,
-  bottom: y ===  1 ? ['','y','k'] : null
+  bottom: y ===  1 ? ['','w','k'] : null
 })[face];
 
 /*MATH-START*/
